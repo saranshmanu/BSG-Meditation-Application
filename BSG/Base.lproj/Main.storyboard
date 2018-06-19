@@ -9,6 +9,20 @@
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="Lato-Black.ttf">
+            <string>Lato-Black</string>
+        </array>
+        <array key="Lato-Bold.ttf">
+            <string>Lato-Bold</string>
+        </array>
+        <array key="Lato-Light.ttf">
+            <string>Lato-Light</string>
+        </array>
+        <array key="Lato-Regular.ttf">
+            <string>Lato-Regular</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
@@ -19,21 +33,151 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FB3-Eg-sy0">
-                                <rect key="frame" x="0.0" y="585" width="375" height="82"/>
-                                <color key="backgroundColor" red="0.38823529410000002" green="0.84313725490000002" blue="0.36078431370000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <rect key="frame" x="0.0" y="577" width="375" height="90"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0we-BW-HEd" customClass="ZFRippleButton" customModule="BSG" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="90"/>
+                                        <fontDescription key="fontDescription" name="Lato-Bold" family="Lato" pointSize="24"/>
+                                        <connections>
+                                            <action selector="beginTheSession:" destination="BYZ-38-t0r" eventType="touchUpInside" id="av4-WY-r7C"/>
+                                        </connections>
+                                    </button>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="JyS-bJ-byq">
+                                        <rect key="frame" x="0.0" y="24.5" width="375" height="41.5"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Begin Daimoku" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jni-XU-ZM8">
+                                                <rect key="frame" x="0.0" y="0.0" width="375" height="24"/>
+                                                <fontDescription key="fontDescription" name="Lato-Bold" family="Lato" pointSize="20"/>
+                                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="last seen at 3:34 PM" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kc3-wd-t1t">
+                                                <rect key="frame" x="0.0" y="27" width="375" height="14.5"/>
+                                                <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="12"/>
+                                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" red="0.47843137254901963" green="0.7803921568627451" blue="0.30196078431372547" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <gestureRecognizers/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="82" id="qyT-H7-YvB"/>
+                                    <constraint firstItem="0we-BW-HEd" firstAttribute="top" secondItem="FB3-Eg-sy0" secondAttribute="top" id="Jl4-sg-dh8"/>
+                                    <constraint firstItem="JyS-bJ-byq" firstAttribute="leading" secondItem="FB3-Eg-sy0" secondAttribute="leading" id="Mro-vA-rKT"/>
+                                    <constraint firstAttribute="trailing" secondItem="0we-BW-HEd" secondAttribute="trailing" id="OVc-fT-ZfR"/>
+                                    <constraint firstAttribute="bottom" secondItem="0we-BW-HEd" secondAttribute="bottom" id="baw-My-3oM"/>
+                                    <constraint firstItem="0we-BW-HEd" firstAttribute="leading" secondItem="FB3-Eg-sy0" secondAttribute="leading" id="dKC-9y-TDv"/>
+                                    <constraint firstItem="JyS-bJ-byq" firstAttribute="centerY" secondItem="FB3-Eg-sy0" secondAttribute="centerY" id="gxS-1a-wkt"/>
+                                    <constraint firstAttribute="trailing" secondItem="JyS-bJ-byq" secondAttribute="trailing" id="pW7-Yq-CXT"/>
+                                    <constraint firstAttribute="height" constant="90" id="qyT-H7-YvB"/>
                                 </constraints>
                                 <connections>
                                     <outletCollection property="gestureRecognizers" destination="glI-2I-RLA" appends="YES" id="mq2-aM-SmP"/>
                                 </connections>
                             </view>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="gJ5-pQ-HZr">
+                                <rect key="frame" x="37.5" y="80" width="300" height="53.5"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="T R A C K   Y O U R" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a71-Wa-d2b">
+                                        <rect key="frame" x="0.0" y="0.0" width="300" height="17"/>
+                                        <fontDescription key="fontDescription" name="Lato-Light" family="Lato" pointSize="14"/>
+                                        <color key="textColor" red="0.3294117647" green="0.3294117647" blue="0.3294117647" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="highlightedColor" red="0.3294117647" green="0.3294117647" blue="0.3294117647" alpha="0.0" colorSpace="calibratedRGB"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="letterSpace">
+                                                <real key="value" value="4"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="D    A    I    M    O    K    U" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hWF-Il-tht">
+                                        <rect key="frame" x="0.0" y="27" width="300" height="26.5"/>
+                                        <fontDescription key="fontDescription" name="Lato-Black" family="Lato" pointSize="22"/>
+                                        <color key="textColor" red="0.16862745100000001" green="0.16862745100000001" blue="0.16862745100000001" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="highlightedColor" red="0.16862745100000001" green="0.16862745100000001" blue="1" alpha="0.0" colorSpace="calibratedRGB"/>
+                                    </label>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="300" id="NQs-Jy-APo"/>
+                                </constraints>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="fkC-au-RdJ">
+                                <rect key="frame" x="108.5" y="298" width="158.5" height="70.5"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalCentering" alignment="bottom" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="D8X-aO-7eX">
+                                        <rect key="frame" x="0.0" y="0.0" width="158.5" height="38.5"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nNS-Jb-nu1">
+                                                <rect key="frame" x="0.0" y="0.0" width="158.5" height="19.5"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You've done" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZuI-oA-Ylf">
+                                                        <rect key="frame" x="0.0" y="0.0" width="85" height="19.5"/>
+                                                        <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="16"/>
+                                                        <color key="textColor" red="0.41568627450980394" green="0.41568627450980394" blue="0.41568627450980394" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" 0 minutes" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6ru-l1-wWu">
+                                                        <rect key="frame" x="85" y="0.0" width="73.5" height="19.5"/>
+                                                        <fontDescription key="fontDescription" name="Lato-Bold" family="Lato" pointSize="16"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="of Daimoku today" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Y1r-YP-s55">
+                                                <rect key="frame" x="0.0" y="22.5" width="158.5" height="16"/>
+                                                <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="13"/>
+                                                <color key="textColor" red="0.41568627450980394" green="0.41568627450980394" blue="0.41568627450980394" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="Y1r-YP-s55" firstAttribute="width" secondItem="D8X-aO-7eX" secondAttribute="width" id="g6y-rB-IkX"/>
+                                        </constraints>
+                                    </stackView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ILJ-S2-1QL">
+                                        <rect key="frame" x="69" y="48.5" width="21" height="22"/>
+                                        <state key="normal" image="like2"/>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="7" translatesAutoresizingMaskIntoConstraints="NO" id="VDC-Np-X4l">
+                                <rect key="frame" x="61.5" y="475" width="253.5" height="22"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rlk-ja-dxi">
+                                        <rect key="frame" x="0.0" y="0.0" width="16" height="22"/>
+                                        <state key="normal" image="heart"/>
+                                    </button>
+                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qbI-c2-WH2">
+                                        <rect key="frame" x="23" y="0.0" width="230.5" height="22"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Yesterday you did" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1GR-bp-XQR">
+                                                <rect key="frame" x="0.0" y="0.0" width="101" height="22"/>
+                                                <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="13"/>
+                                                <color key="textColor" red="0.41568627450000001" green="0.41568627450000001" blue="0.41568627450000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" 0 minutes of Daimoku" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HKg-hz-gTS">
+                                                <rect key="frame" x="101" y="0.0" width="129.5" height="22"/>
+                                                <fontDescription key="fontDescription" name="Lato-Bold" family="Lato" pointSize="13"/>
+                                                <color key="textColor" red="0.40392156862745099" green="0.40392156862745099" blue="0.40392156862745099" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="FB3-Eg-sy0" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="7Ch-aX-AvS"/>
+                            <constraint firstItem="gJ5-pQ-HZr" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="60" id="7Vi-Qy-Hqh"/>
+                            <constraint firstItem="FB3-Eg-sy0" firstAttribute="top" secondItem="VDC-Np-X4l" secondAttribute="bottom" constant="80" id="7a0-YR-MYZ"/>
+                            <constraint firstItem="fkC-au-RdJ" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="GWz-1l-0Pt"/>
+                            <constraint firstItem="gJ5-pQ-HZr" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="Q3p-8o-PtD"/>
                             <constraint firstItem="FB3-Eg-sy0" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="Qab-cd-LYI"/>
+                            <constraint firstItem="fkC-au-RdJ" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" constant="-10.25" id="eHP-0d-PeZ"/>
+                            <constraint firstItem="VDC-Np-X4l" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="jSF-yy-HqA"/>
                             <constraint firstItem="FB3-Eg-sy0" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="qiV-cT-jX8"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -52,5 +196,57 @@
             </objects>
             <point key="canvasLocation" x="136.80000000000001" y="133.5832083958021"/>
         </scene>
+        <!--Player View Controller-->
+        <scene sceneID="FT9-Wq-LCt">
+            <objects>
+                <viewController id="6tF-JS-Yah" customClass="PlayerViewController" customModule="BSG" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="kMp-Xe-n4j">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="btR-jK-kgK">
+                                <rect key="frame" x="33" y="45" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="wGV-3O-yQJ"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yDJ-mU-0q4" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="788" y="136"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="liG-Lv-gUo">
+            <objects>
+                <viewController id="3H6-6B-eux" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Iem-P6-jLr">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Screen Shot 2018-06-19 at 5.07.26 PM" translatesAutoresizingMaskIntoConstraints="NO" id="lhm-Zz-reZ">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="lhm-Zz-reZ" firstAttribute="trailing" secondItem="24j-wS-MhX" secondAttribute="trailing" id="5m6-pO-iG2"/>
+                            <constraint firstItem="lhm-Zz-reZ" firstAttribute="leading" secondItem="24j-wS-MhX" secondAttribute="leading" id="Hl1-Z8-Jma"/>
+                            <constraint firstItem="lhm-Zz-reZ" firstAttribute="top" secondItem="Iem-P6-jLr" secondAttribute="top" id="Ixq-Y4-s5N"/>
+                            <constraint firstAttribute="bottom" secondItem="lhm-Zz-reZ" secondAttribute="bottom" id="nJn-cY-cga"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="24j-wS-MhX"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Q0D-As-NU4" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1486" y="134"/>
+        </scene>
     </scenes>
+    <resources>
+        <image name="Screen Shot 2018-06-19 at 5.07.26 PM" width="748" height="1326"/>
+        <image name="heart" width="16" height="14"/>
+        <image name="like2" width="21" height="20"/>
+    </resources>
 </document>

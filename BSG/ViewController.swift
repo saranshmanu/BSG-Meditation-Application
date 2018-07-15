@@ -9,8 +9,14 @@
 import UIKit
 
 struct defaultsKeys {
-    static let hours = "0"
-    static let minutes = "0"
+    static let hours = "hours"
+    static let minutes = "minutes"
+}
+struct lastPractised {
+    static let day = "day"
+    static let month = "month"
+    static let year = "year"
+    static let minutes = "practisedMinutes"
 }
 
 class ViewController: UIViewController {
@@ -29,17 +35,7 @@ class ViewController: UIViewController {
 //        }
     }
     
-    override func viewDidDisappear(_ animated: Bool) {
-        let date = Date()
-        let calendar = Calendar.current
-        var currentHour = calendar.component(.hour, from: date)
-        var currentMinutes = calendar.component(.minute, from: date)
-        let defaults = UserDefaults.standard
-        defaults.set(String(currentHour), forKey: defaultsKeys.hours)
-        defaults.set(String(currentMinutes), forKey: defaultsKeys.minutes)
-    }
-    
-    override func viewDidAppear(_ animated: Bool) {
+    @objc func changeLastSeen(){
         let defaults = UserDefaults.standard
         if let stringOne = defaults.string(forKey: defaultsKeys.minutes) {
             lastSeenMinutes = Int(stringOne)!
@@ -47,25 +43,68 @@ class ViewController: UIViewController {
         if let stringTwo = defaults.string(forKey: defaultsKeys.hours) {
             lastSeenHours = Int(stringTwo)!
         }
-        todayMinutesPractiseLabel.text = " " + String(practisedMinutes) + " minutes"
-        if lastSeenHours > 12{
-            lastSeenLabel.text = "last seen at " + String(lastSeenHours%12) + ":" + String(lastSeenMinutes) + " PM"
+        if lastSeenHours < 12{
+            if lastSeenMinutes<10{
+                lastSeenLabel.text = "last seen at " + String(lastSeenHours) + ":0" + String(lastSeenMinutes) + " AM"
+            } else {
+                lastSeenLabel.text = "last seen at " + String(lastSeenHours) + ":" + String(lastSeenMinutes) + " AM"
+            }
         } else {
-            lastSeenLabel.text = "last seen at " + String(lastSeenHours) + ":" + String(lastSeenMinutes) + " AM"
+            if lastSeenMinutes<10{
+                lastSeenLabel.text = "last seen at " + String(lastSeenHours%12) + ":0" + String(lastSeenMinutes) + " AM"
+            } else {
+                lastSeenLabel.text = "last seen at " + String(lastSeenHours%12) + ":" + String(lastSeenMinutes) + " AM"
+            }
         }
     }
-
+    
+    var totalPractisedMinutesOfToday = 0
+    var practisedDay = 0
+    var practisedMonth = 0
+    var practisedYear = 0
+    
+    func loadSession(){
+        let currentDate = Date()
+        let calendar = Calendar.current
+        let defaults = UserDefaults.standard
+        if let month = defaults.string(forKey: lastPractised.month) {
+            var MONTH = Int(month)!
+            if let year = defaults.string(forKey: lastPractised.year) {
+                var YEAR = Int(year)!
+                if let date = defaults.string(forKey: lastPractised.day) {
+                    var DATE = Int(date)!
+                    if DATE == calendar.component(.day, from: currentDate) && MONTH == calendar.component(.month, from: currentDate) && YEAR == calendar.component(.year, from: currentDate) {
+                        if let practisedMin = defaults.string(forKey: lastPractised.minutes) {
+                            totalPractisedMinutesOfToday = Int(practisedMin)!
+                            print(totalPractisedMinutesOfToday)
+                        }
+                    }
+                }
+            }
+        }
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        changePractisedToday()
+    }
+    
+    @objc func changePractisedToday(){
+        loadSession()
+        todayMinutesPractiseLabel.text = " " + String(totalPractisedMinutesOfToday) + " minutes"
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-//        let gestureRecognizer = UIPanGestureRecognizer(target: self, action: #selector(handlePan))
-//        self.bottomView.addGestureRecognizer(gestureRecognizer)
+        changeLastSeen()
         var navigationBarAppearace = UINavigationBar.appearance()
         navigationBarAppearace.tintColor = UIColor.white
         navigationBarAppearace.barTintColor = UIColor.white
         navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .any, barMetrics: .default)
         navigationController?.navigationBar.shadowImage = UIImage()
         navigationController?.navigationBar.isTranslucent = false
+        NotificationCenter.default.addObserver(self, selector: #selector(self.changeLastSeen), name: NSNotification.Name.UIApplicationDidBecomeActive, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(self.changePractisedToday), name: NSNotification.Name.UIApplicationDidBecomeActive, object: nil)
     }
 
     override func didReceiveMemoryWarning() {

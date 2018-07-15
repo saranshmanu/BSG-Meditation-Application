@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		953F9A2C20FA813100264E53 /* track.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 953F9A2B20FA813000264E53 /* track.mp3 */; };
 		958A57C220D9273F00FC6F29 /* RippleEffect.swift in Sources */ = {isa = PBXBuildFile; fileRef = 958A57C120D9273E00FC6F29 /* RippleEffect.swift */; };
 		958A57C420D92AFA00FC6F29 /* PlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 958A57C320D92AFA00FC6F29 /* PlayerViewController.swift */; };
 		95FF287F20D6A70800B9F9D9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95FF287E20D6A70800B9F9D9 /* AppDelegate.swift */; };
@@ -37,6 +38,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		953F9A2B20FA813000264E53 /* track.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = track.mp3; sourceTree = "<group>"; };
 		958A57C120D9273E00FC6F29 /* RippleEffect.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RippleEffect.swift; sourceTree = "<group>"; };
 		958A57C320D92AFA00FC6F29 /* PlayerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerViewController.swift; sourceTree = "<group>"; };
 		95FF287B20D6A70800B9F9D9 /* BSG.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BSG.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -117,6 +119,7 @@
 				95FF287E20D6A70800B9F9D9 /* AppDelegate.swift */,
 				95FF288020D6A70800B9F9D9 /* ViewController.swift */,
 				95FF288220D6A70800B9F9D9 /* Main.storyboard */,
+				953F9A2B20FA813000264E53 /* track.mp3 */,
 				958A57C120D9273E00FC6F29 /* RippleEffect.swift */,
 				95FF288520D6A70800B9F9D9 /* Assets.xcassets */,
 				95FF288720D6A70800B9F9D9 /* LaunchScreen.storyboard */,
@@ -269,6 +272,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				953F9A2C20FA813100264E53 /* track.mp3 in Resources */,
 				95FF288920D6A70800B9F9D9 /* LaunchScreen.storyboard in Resources */,
 				95FF288620D6A70800B9F9D9 /* Assets.xcassets in Resources */,
 				95FF288420D6A70800B9F9D9 /* Main.storyboard in Resources */,

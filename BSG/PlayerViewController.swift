@@ -7,10 +7,45 @@
 //
 
 import UIKit
-
-var practisedMinutes = 0
+import AVFoundation
 
 class PlayerViewController: UIViewController {
+    
+    var player: AVAudioPlayer?
+    var startedToPlay = false
+    
+    func playSound() {
+        guard let url = Bundle.main.url(forResource: "track", withExtension: "mp3") else { return }
+        do {
+            try AVAudioSession.sharedInstance().setCategory(AVAudioSessionCategoryPlayback)
+            try AVAudioSession.sharedInstance().setActive(true)
+            /* The following line is required for the player to work on iOS 11. Change the file type accordingly*/
+            player = try AVAudioPlayer(contentsOf: url, fileTypeHint: AVFileType.mp3.rawValue)
+            /* iOS 10 and earlier require the following line:
+             player = try AVAudioPlayer(contentsOf: url, fileTypeHint: AVFileTypeMPEGLayer3) */
+            guard let player = player else { return }
+            player.play()
+        } catch let error {
+            print(error.localizedDescription)
+        }
+    }
+    
+    func pauseSound(){
+        guard let url = Bundle.main.url(forResource: "track", withExtension: "mp3") else { return }
+        do {
+            try AVAudioSession.sharedInstance().setCategory(AVAudioSessionCategoryPlayback)
+            try AVAudioSession.sharedInstance().setActive(true)
+            /* The following line is required for the player to work on iOS 11. Change the file type accordingly*/
+            player = try AVAudioPlayer(contentsOf: url, fileTypeHint: AVFileType.mp3.rawValue)
+            /* iOS 10 and earlier require the following line:
+             player = try AVAudioPlayer(contentsOf: url, fileTypeHint: AVFileTypeMPEGLayer3) */
+            guard let player = player else { return }
+            player.pause()
+        } catch let error {
+            print(error.localizedDescription)
+        }
+    }
+    
     var isPlaying:Bool = false
     var timerStarted = false
     var time = 0.6
@@ -31,8 +66,9 @@ class PlayerViewController: UIViewController {
             seconds.text = String(sec)
         }
         
-        if sec==60{
+        if sec==59{
             sec=0
+            seconds.text = "0" + String(sec)
             min+=1
             if min <= 9{
                 minutes.text = "0" + String(min)
@@ -40,8 +76,9 @@ class PlayerViewController: UIViewController {
                 minutes.text = String(min)
             }
         }
-        if min==60{
+        if min==59{
             min=0
+            minutes.text = "0" + String(min)
             hour+=1
             if hour <= 9{
                 hours.text = "0" + String(hour)
@@ -50,17 +87,53 @@ class PlayerViewController: UIViewController {
             }
         }
     }
-    override func viewWillDisappear(_ animated: Bool) {
-        if hour >= 1{
-            practisedMinutes = practisedMinutes*hour
+    
+    var totalPractisedMinutesOfToday = 0
+    
+    @objc func loadSession(){
+        let currentDate = Date()
+        let calendar = Calendar.current
+        var previousMinutes = 0
+        let defaults = UserDefaults.standard
+        if let month = defaults.string(forKey: lastPractised.month) {
+            var MONTH = Int(month)!
+            if let year = defaults.string(forKey: lastPractised.year) {
+                var YEAR = Int(year)!
+                if let date = defaults.string(forKey: lastPractised.day) {
+                    var DATE = Int(date)!
+                    if DATE == calendar.component(.day, from: currentDate) && MONTH == calendar.component(.month, from: currentDate) && YEAR == calendar.component(.year, from: currentDate) {
+                        if let practisedMin = defaults.string(forKey: lastPractised.minutes) {
+                            totalPractisedMinutesOfToday = Int(practisedMin)!
+                        }
+                    }
+                }
+            }
         }
-        practisedMinutes = practisedMinutes + min
+    }
+    
+    @objc func saveSession(){
+        totalPractisedMinutesOfToday = totalPractisedMinutesOfToday + hour * 60 + min
+        saveLastPractised()
+    }
+    
+    func saveLastPractised(){
+        let defaults = UserDefaults.standard
+        let currentDate = Date()
+        let calendar = Calendar.current
+        var practisedDay = calendar.component(.day, from: currentDate)
+        var practisedMonth = calendar.component(.month, from: currentDate)
+        var practisedYear = calendar.component(.year, from: currentDate)
+        defaults.set(String(totalPractisedMinutesOfToday), forKey: lastPractised.minutes)
+        defaults.set(String(practisedDay), forKey: lastPractised.day)
+        defaults.set(String(practisedMonth), forKey: lastPractised.month)
+        defaults.set(String(practisedYear), forKey: lastPractised.year)
     }
     
     func playAction(){
         isPlaying = true
         if timerStarted == false {
             timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(PlayerViewController.action), userInfo: nil, repeats: true)
+            playSound()
             timerStarted = true
         }
         bottomPlayDescription.text = "Now Chanting.."
@@ -85,6 +158,7 @@ class PlayerViewController: UIViewController {
         isPlaying = false
         if timerStarted == true {
             timer.invalidate()
+            pauseSound()
             timerStarted = false
         }
         bottomPlayDescription.text = "Play to continue"
@@ -99,9 +173,15 @@ class PlayerViewController: UIViewController {
     }
     
     override func viewDidAppear(_ animated: Bool) {
+        sec=0
+        min=0
+        hour=0
+        totalPractisedMinutesOfToday = 0
+        loadSession()
         stopAction()
     }
     override func viewDidDisappear(_ animated: Bool) {
+        saveSession()
         stopAction()
     }
 
@@ -110,6 +190,7 @@ class PlayerViewController: UIViewController {
     @IBOutlet weak var speakerImage: UIImageView!
     @IBOutlet weak var bottomBarBackgroundBarColor: UIView!
     @IBOutlet weak var bottomPlayDescription: UILabel!
+    
     @IBAction func bottonPlayButton(_ sender: Any) {
         if isPlaying == false{
             playAction()
@@ -117,8 +198,12 @@ class PlayerViewController: UIViewController {
             stopAction()
         }
     }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        NotificationCenter.default.addObserver(self, selector: #selector(self.saveSession), name: NSNotification.Name.UIApplicationDidEnterBackground, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(self.saveSession), name: NSNotification.Name.UIApplicationWillTerminate, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(self.loadSession), name: NSNotification.Name.UIApplicationDidBecomeActive, object: nil)
     }
 
     override func didReceiveMemoryWarning() {

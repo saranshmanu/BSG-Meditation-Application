@@ -21,6 +21,7 @@ struct lastPractised {
 
 class ViewController: UIViewController {
     
+    @IBOutlet weak var yesterdayPractisedLabel: UILabel!
     @IBOutlet weak var lastSeenLabel: UILabel!
     @IBOutlet weak var todayMinutesPractiseLabel: UILabel!
     @IBOutlet weak var bottomView: UIView!

@@ -34,10 +34,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FB3-Eg-sy0">
-                                <rect key="frame" x="0.0" y="577" width="375" height="90"/>
+                                <rect key="frame" x="0.0" y="587" width="375" height="80"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="JyS-bJ-byq">
-                                        <rect key="frame" x="0.0" y="24" width="375" height="41.5"/>
+                                        <rect key="frame" x="0.0" y="19" width="375" height="41.5"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Begin Daimoku" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jni-XU-ZM8">
                                                 <rect key="frame" x="0.0" y="0.0" width="375" height="24"/>
@@ -54,7 +54,7 @@
                                         </subviews>
                                     </stackView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0we-BW-HEd" customClass="ZFRippleButton" customModule="BSG" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="90"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="80"/>
                                         <gestureRecognizers/>
                                         <fontDescription key="fontDescription" name="Lato-Bold" family="Lato" pointSize="24"/>
                                         <userDefinedRuntimeAttributes>
@@ -79,7 +79,7 @@
                                     <constraint firstItem="0we-BW-HEd" firstAttribute="leading" secondItem="FB3-Eg-sy0" secondAttribute="leading" id="dKC-9y-TDv"/>
                                     <constraint firstItem="JyS-bJ-byq" firstAttribute="centerY" secondItem="FB3-Eg-sy0" secondAttribute="centerY" id="gxS-1a-wkt"/>
                                     <constraint firstAttribute="trailing" secondItem="JyS-bJ-byq" secondAttribute="trailing" id="pW7-Yq-CXT"/>
-                                    <constraint firstAttribute="height" constant="90" id="qyT-H7-YvB"/>
+                                    <constraint firstAttribute="height" constant="80" id="qyT-H7-YvB"/>
                                 </constraints>
                             </view>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="gJ5-pQ-HZr">
@@ -147,8 +147,8 @@
                                     </button>
                                 </subviews>
                             </stackView>
-                            <stackView opaque="NO" contentMode="scaleToFill" spacing="7" translatesAutoresizingMaskIntoConstraints="NO" id="VDC-Np-X4l">
-                                <rect key="frame" x="61.5" y="475" width="253.5" height="22"/>
+                            <stackView hidden="YES" opaque="NO" contentMode="scaleToFill" spacing="7" translatesAutoresizingMaskIntoConstraints="NO" id="VDC-Np-X4l">
+                                <rect key="frame" x="61" y="495" width="253.5" height="22"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rlk-ja-dxi">
                                         <rect key="frame" x="0.0" y="0.0" width="16" height="22"/>
@@ -173,18 +173,27 @@
                                     </stackView>
                                 </subviews>
                             </stackView>
+                            <imageView userInteractionEnabled="NO" alpha="0.14999999999999999" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Logo" translatesAutoresizingMaskIntoConstraints="NO" id="pSL-0z-o05">
+                                <rect key="frame" x="0.0" y="219.5" width="375" height="292"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="pSL-0z-o05" secondAttribute="height" multiplier="375:292" id="rv8-lI-wrL"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="FB3-Eg-sy0" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="7Ch-aX-AvS"/>
                             <constraint firstItem="gJ5-pQ-HZr" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="30" id="7Vi-Qy-Hqh"/>
-                            <constraint firstItem="FB3-Eg-sy0" firstAttribute="top" secondItem="VDC-Np-X4l" secondAttribute="bottom" constant="80" id="7a0-YR-MYZ"/>
+                            <constraint firstItem="FB3-Eg-sy0" firstAttribute="top" secondItem="VDC-Np-X4l" secondAttribute="bottom" constant="70" id="7a0-YR-MYZ"/>
                             <constraint firstItem="fkC-au-RdJ" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="GWz-1l-0Pt"/>
+                            <constraint firstItem="pSL-0z-o05" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="P4g-aE-P3G"/>
                             <constraint firstItem="gJ5-pQ-HZr" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="Q3p-8o-PtD"/>
                             <constraint firstItem="FB3-Eg-sy0" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="Qab-cd-LYI"/>
                             <constraint firstItem="fkC-au-RdJ" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" constant="-10.25" id="eHP-0d-PeZ"/>
+                            <constraint firstItem="pSL-0z-o05" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="ier-Do-HEE"/>
                             <constraint firstItem="VDC-Np-X4l" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="jSF-yy-HqA"/>
                             <constraint firstItem="FB3-Eg-sy0" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="qiV-cT-jX8"/>
+                            <constraint firstItem="pSL-0z-o05" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="s3w-XV-bnD"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
@@ -194,6 +203,7 @@
                         <outlet property="bottomView" destination="FB3-Eg-sy0" id="V2X-ed-4bw"/>
                         <outlet property="lastSeenLabel" destination="kc3-wd-t1t" id="B35-qP-0pS"/>
                         <outlet property="todayMinutesPractiseLabel" destination="6ru-l1-wWu" id="swQ-uQ-gM8"/>
+                        <outlet property="yesterdayPractisedLabel" destination="HKg-hz-gTS" id="WdI-pl-aTS"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -203,7 +213,7 @@
                     </connections>
                 </panGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="878" y="134"/>
+            <point key="canvasLocation" x="877.60000000000002" y="133.5832083958021"/>
         </scene>
         <!--Player View Controller-->
         <scene sceneID="FT9-Wq-LCt">
@@ -218,10 +228,10 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bO7-BL-G6N">
-                                <rect key="frame" x="0.0" y="577" width="375" height="90"/>
+                                <rect key="frame" x="0.0" y="587" width="375" height="80"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="PUi-dh-UOC">
-                                        <rect key="frame" x="0.0" y="33.5" width="375" height="24"/>
+                                        <rect key="frame" x="0.0" y="28" width="375" height="24"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Play to Begin" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tzW-x8-pkw">
                                                 <rect key="frame" x="0.0" y="0.0" width="375" height="24"/>
@@ -232,7 +242,7 @@
                                         </subviews>
                                     </stackView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="47H-Ax-FSR" customClass="ZFRippleButton" customModule="BSG" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="90"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="80"/>
                                         <gestureRecognizers/>
                                         <fontDescription key="fontDescription" name="Lato-Bold" family="Lato" pointSize="24"/>
                                         <userDefinedRuntimeAttributes>
@@ -253,22 +263,22 @@
                                     <constraint firstAttribute="trailing" secondItem="PUi-dh-UOC" secondAttribute="trailing" id="32A-zj-Lyq"/>
                                     <constraint firstAttribute="bottom" secondItem="47H-Ax-FSR" secondAttribute="bottom" id="3AM-BC-L2r"/>
                                     <constraint firstAttribute="trailing" secondItem="47H-Ax-FSR" secondAttribute="trailing" id="JyZ-J6-BnY"/>
-                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="90" id="dDF-6E-JyY"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="80" id="dDF-6E-JyY"/>
                                     <constraint firstItem="PUi-dh-UOC" firstAttribute="centerY" secondItem="bO7-BL-G6N" secondAttribute="centerY" id="fou-78-saz"/>
                                     <constraint firstItem="PUi-dh-UOC" firstAttribute="leading" secondItem="bO7-BL-G6N" secondAttribute="leading" id="gL0-2H-lZJ"/>
-                                    <constraint firstAttribute="height" constant="90" id="kLY-Hf-Jqr"/>
+                                    <constraint firstAttribute="height" constant="80" id="kLY-Hf-Jqr"/>
                                     <constraint firstItem="47H-Ax-FSR" firstAttribute="leading" secondItem="bO7-BL-G6N" secondAttribute="leading" id="pD0-RD-dVQ"/>
                                 </constraints>
                             </view>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="speakerGrey" translatesAutoresizingMaskIntoConstraints="NO" id="3Wh-tq-1rI">
-                                <rect key="frame" x="154" y="103" width="67" height="68"/>
+                                <rect key="frame" x="154" y="79" width="67" height="68"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="68" id="9fd-OC-amE"/>
                                     <constraint firstAttribute="width" secondItem="3Wh-tq-1rI" secondAttribute="height" multiplier="67:68" id="m7g-FP-pIq"/>
                                 </constraints>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="caF-kz-hiC">
-                                <rect key="frame" x="88.5" y="211" width="198" height="46"/>
+                                <rect key="frame" x="88.5" y="182" width="198" height="46"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nam Myoho Renge Kyo" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pxT-I0-3Cw">
                                         <rect key="frame" x="0.0" y="0.0" width="198" height="23"/>
@@ -284,8 +294,8 @@
                                     </label>
                                 </subviews>
                             </stackView>
-                            <stackView opaque="NO" contentMode="scaleToFill" spacing="130" translatesAutoresizingMaskIntoConstraints="NO" id="8uB-Ob-UDs">
-                                <rect key="frame" x="81.5" y="401" width="212" height="75.5"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="100" translatesAutoresizingMaskIntoConstraints="NO" id="8uB-Ob-UDs">
+                                <rect key="frame" x="96.5" y="471.5" width="182" height="75.5"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="13" translatesAutoresizingMaskIntoConstraints="NO" id="5bP-M2-N0H">
                                         <rect key="frame" x="0.0" y="0.0" width="37.5" height="75.5"/>
@@ -306,7 +316,7 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="13" translatesAutoresizingMaskIntoConstraints="NO" id="Mcn-fa-JhJ">
-                                        <rect key="frame" x="167.5" y="0.0" width="44.5" height="75.5"/>
+                                        <rect key="frame" x="137.5" y="0.0" width="44.5" height="75.5"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pause" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nyH-XD-eSC">
                                                 <rect key="frame" x="0.0" y="0.0" width="44.5" height="20.5"/>
@@ -326,7 +336,7 @@
                                 </subviews>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="Fnt-bM-oKl">
-                                <rect key="frame" x="120" y="304" width="135" height="18"/>
+                                <rect key="frame" x="120" y="258" width="135" height="18"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="time" translatesAutoresizingMaskIntoConstraints="NO" id="jd9-xQ-peP">
                                         <rect key="frame" x="0.0" y="0.0" width="15" height="18"/>
@@ -357,7 +367,7 @@
                                 </subviews>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="qZl-27-wUD">
-                                <rect key="frame" x="176.5" y="294.5" width="85" height="13.5"/>
+                                <rect key="frame" x="176" y="248" width="85" height="13.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="H" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="paY-Rr-Ovq">
                                         <rect key="frame" x="0.0" y="0.0" width="8.5" height="13.5"/>
@@ -384,16 +394,16 @@
                         <constraints>
                             <constraint firstItem="qZl-27-wUD" firstAttribute="centerX" secondItem="Fnt-bM-oKl" secondAttribute="centerX" constant="31" id="7qi-n5-mZO"/>
                             <constraint firstItem="bO7-BL-G6N" firstAttribute="bottom" secondItem="wGV-3O-yQJ" secondAttribute="bottom" id="Aju-bE-IKq"/>
-                            <constraint firstItem="caF-kz-hiC" firstAttribute="top" secondItem="3Wh-tq-1rI" secondAttribute="bottom" constant="40" id="BS9-ui-MtF"/>
+                            <constraint firstItem="caF-kz-hiC" firstAttribute="top" secondItem="3Wh-tq-1rI" secondAttribute="bottom" constant="35" id="BS9-ui-MtF"/>
                             <constraint firstItem="3Wh-tq-1rI" firstAttribute="centerX" secondItem="wGV-3O-yQJ" secondAttribute="centerX" id="Hjd-Pr-upI"/>
                             <constraint firstItem="qZl-27-wUD" firstAttribute="centerY" secondItem="Fnt-bM-oKl" secondAttribute="centerY" constant="-12.25" id="I1P-iL-zfW"/>
-                            <constraint firstItem="bO7-BL-G6N" firstAttribute="top" secondItem="8uB-Ob-UDs" secondAttribute="bottom" constant="100.5" id="WpD-G1-FG9"/>
+                            <constraint firstItem="bO7-BL-G6N" firstAttribute="top" secondItem="8uB-Ob-UDs" secondAttribute="bottom" constant="40" id="WpD-G1-FG9"/>
                             <constraint firstItem="bO7-BL-G6N" firstAttribute="trailing" secondItem="wGV-3O-yQJ" secondAttribute="trailing" id="aVD-Ou-Dd1"/>
                             <constraint firstItem="8uB-Ob-UDs" firstAttribute="centerX" secondItem="wGV-3O-yQJ" secondAttribute="centerX" id="eoq-1m-Xup"/>
                             <constraint firstItem="caF-kz-hiC" firstAttribute="centerX" secondItem="wGV-3O-yQJ" secondAttribute="centerX" id="g1W-ef-cOr"/>
                             <constraint firstItem="bO7-BL-G6N" firstAttribute="leading" secondItem="wGV-3O-yQJ" secondAttribute="leading" id="jZW-nF-Wyg"/>
-                            <constraint firstItem="Fnt-bM-oKl" firstAttribute="top" secondItem="caF-kz-hiC" secondAttribute="bottom" constant="47" id="lgQ-TO-pPs"/>
-                            <constraint firstItem="3Wh-tq-1rI" firstAttribute="top" secondItem="wGV-3O-yQJ" secondAttribute="top" constant="39" id="sMt-kQ-Kcf"/>
+                            <constraint firstItem="Fnt-bM-oKl" firstAttribute="top" secondItem="caF-kz-hiC" secondAttribute="bottom" constant="30" id="lgQ-TO-pPs"/>
+                            <constraint firstItem="3Wh-tq-1rI" firstAttribute="top" secondItem="wGV-3O-yQJ" secondAttribute="top" constant="15" id="sMt-kQ-Kcf"/>
                             <constraint firstItem="Fnt-bM-oKl" firstAttribute="centerX" secondItem="wGV-3O-yQJ" secondAttribute="centerX" id="t8g-PP-fWj"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="wGV-3O-yQJ"/>
@@ -434,6 +444,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="Logo" width="1024" height="1024"/>
         <image name="heart" width="16" height="14"/>
         <image name="like2" width="21" height="20"/>
         <image name="pause" width="35" height="42"/>

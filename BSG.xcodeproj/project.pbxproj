@@ -17,7 +17,6 @@
 		95FF288920D6A70800B9F9D9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 95FF288720D6A70800B9F9D9 /* LaunchScreen.storyboard */; };
 		95FF289420D6A70800B9F9D9 /* BSGTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95FF289320D6A70800B9F9D9 /* BSGTests.swift */; };
 		95FF289F20D6A70800B9F9D9 /* BSGUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95FF289E20D6A70800B9F9D9 /* BSGUITests.swift */; };
-		95FF28AD20D6A76A00B9F9D9 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95FF28AC20D6A76A00B9F9D9 /* Constants.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,7 +53,6 @@
 		95FF289A20D6A70800B9F9D9 /* BSGUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BSGUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		95FF289E20D6A70800B9F9D9 /* BSGUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BSGUITests.swift; sourceTree = "<group>"; };
 		95FF28A020D6A70800B9F9D9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		95FF28AC20D6A76A00B9F9D9 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		95FF28AE20D6AE1400B9F9D9 /* Lato-BlackItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-BlackItalic.ttf"; sourceTree = "<group>"; };
 		95FF28AF20D6AE1400B9F9D9 /* Lato-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Bold.ttf"; sourceTree = "<group>"; };
 		95FF28B020D6AE1400B9F9D9 /* Lato-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Italic.ttf"; sourceTree = "<group>"; };
@@ -115,17 +113,16 @@
 		95FF287D20D6A70800B9F9D9 /* BSG */ = {
 			isa = PBXGroup;
 			children = (
-				95FF28B820D6AE3000B9F9D9 /* Fonts */,
-				95FF287E20D6A70800B9F9D9 /* AppDelegate.swift */,
-				95FF288020D6A70800B9F9D9 /* ViewController.swift */,
-				95FF288220D6A70800B9F9D9 /* Main.storyboard */,
-				953F9A2B20FA813000264E53 /* track.mp3 */,
 				958A57C120D9273E00FC6F29 /* RippleEffect.swift */,
+				95FF287E20D6A70800B9F9D9 /* AppDelegate.swift */,
+				953F9A2B20FA813000264E53 /* track.mp3 */,
+				95FF28B820D6AE3000B9F9D9 /* Fonts */,
 				95FF288520D6A70800B9F9D9 /* Assets.xcassets */,
-				95FF288720D6A70800B9F9D9 /* LaunchScreen.storyboard */,
-				95FF288A20D6A70800B9F9D9 /* Info.plist */,
-				95FF28AC20D6A76A00B9F9D9 /* Constants.swift */,
+				95FF288020D6A70800B9F9D9 /* ViewController.swift */,
 				958A57C320D92AFA00FC6F29 /* PlayerViewController.swift */,
+				95FF288720D6A70800B9F9D9 /* LaunchScreen.storyboard */,
+				95FF288220D6A70800B9F9D9 /* Main.storyboard */,
+				95FF288A20D6A70800B9F9D9 /* Info.plist */,
 			);
 			path = BSG;
 			sourceTree = "<group>";
@@ -303,7 +300,6 @@
 				95FF288120D6A70800B9F9D9 /* ViewController.swift in Sources */,
 				95FF287F20D6A70800B9F9D9 /* AppDelegate.swift in Sources */,
 				958A57C220D9273F00FC6F29 /* RippleEffect.swift in Sources */,
-				95FF28AD20D6A76A00B9F9D9 /* Constants.swift in Sources */,
 				958A57C420D92AFA00FC6F29 /* PlayerViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -473,8 +469,9 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = JCRFV5ZL52;
 				INFOPLIST_FILE = BSG/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.skyblue.BSG;
+				PRODUCT_BUNDLE_IDENTIFIER = com.skyblue.mojo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -488,8 +485,9 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = JCRFV5ZL52;
 				INFOPLIST_FILE = BSG/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.skyblue.BSG;
+				PRODUCT_BUNDLE_IDENTIFIER = com.skyblue.mojo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = 1;

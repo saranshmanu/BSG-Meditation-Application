@@ -8,17 +8,6 @@
 
 import UIKit
 
-struct defaultsKeys {
-    static let hours = "hours"
-    static let minutes = "minutes"
-}
-struct lastPractised {
-    static let day = "day"
-    static let month = "month"
-    static let year = "year"
-    static let minutes = "practisedMinutes"
-}
-
 class ViewController: UIViewController {
     
     @IBOutlet weak var yesterdayPractisedLabel: UILabel!
@@ -96,7 +85,6 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
         changeLastSeen()
         var navigationBarAppearace = UINavigationBar.appearance()
         navigationBarAppearace.tintColor = UIColor.white
@@ -110,9 +98,6 @@ class ViewController: UIViewController {
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
-
-
 }
 

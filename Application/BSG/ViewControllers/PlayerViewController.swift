@@ -14,15 +14,19 @@ class PlayerViewController: UIViewController {
     var player: AVAudioPlayer?
     var startedToPlay = false
     
+    var isPlaying:Bool = false
+    var timerStarted = false
+    var time = 0.6
+    var sec=0
+    var min=0
+    var hour=0
+    
     func playSound() {
-        guard let url = Bundle.main.url(forResource: "track", withExtension: "mp3") else { return }
+        guard let url = Bundle.main.url(forResource: "Track", withExtension: "mp3") else { return }
         do {
             try AVAudioSession.sharedInstance().setCategory(AVAudioSessionCategoryPlayback)
             try AVAudioSession.sharedInstance().setActive(true)
-            /* The following line is required for the player to work on iOS 11. Change the file type accordingly*/
             player = try AVAudioPlayer(contentsOf: url, fileTypeHint: AVFileType.mp3.rawValue)
-            /* iOS 10 and earlier require the following line:
-             player = try AVAudioPlayer(contentsOf: url, fileTypeHint: AVFileTypeMPEGLayer3) */
             guard let player = player else { return }
             player.play()
         } catch let error {
@@ -35,10 +39,7 @@ class PlayerViewController: UIViewController {
         do {
             try AVAudioSession.sharedInstance().setCategory(AVAudioSessionCategoryPlayback)
             try AVAudioSession.sharedInstance().setActive(true)
-            /* The following line is required for the player to work on iOS 11. Change the file type accordingly*/
             player = try AVAudioPlayer(contentsOf: url, fileTypeHint: AVFileType.mp3.rawValue)
-            /* iOS 10 and earlier require the following line:
-             player = try AVAudioPlayer(contentsOf: url, fileTypeHint: AVFileTypeMPEGLayer3) */
             guard let player = player else { return }
             player.pause()
         } catch let error {
@@ -46,13 +47,8 @@ class PlayerViewController: UIViewController {
         }
     }
     
-    var isPlaying:Bool = false
-    var timerStarted = false
-    var time = 0.6
-    var sec=0
-    var min=0
-    var hour=0
-    
+    @IBOutlet weak var pauseButton: UIButton!
+    @IBOutlet weak var playButton: UIButton!
     @IBOutlet weak var seconds: UILabel!
     @IBOutlet weak var minutes: UILabel!
     @IBOutlet weak var hours: UILabel!
@@ -136,7 +132,7 @@ class PlayerViewController: UIViewController {
             playSound()
             timerStarted = true
         }
-        bottomPlayDescription.text = "Now Chanting.."
+        bottomPlayDescription.text = "Now Chanting..."
         self.view.layoutIfNeeded()
         UIView.animate(withDuration: time) {
             self.bottomBarBackgroundBarColor.backgroundColor = UIColor.init(red: 218/255, green: 218/255, blue: 218/255, alpha: 1.0)
@@ -204,6 +200,7 @@ class PlayerViewController: UIViewController {
         NotificationCenter.default.addObserver(self, selector: #selector(self.saveSession), name: NSNotification.Name.UIApplicationDidEnterBackground, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(self.saveSession), name: NSNotification.Name.UIApplicationWillTerminate, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(self.loadSession), name: NSNotification.Name.UIApplicationDidBecomeActive, object: nil)
+        
     }
 
     override func didReceiveMemoryWarning() {

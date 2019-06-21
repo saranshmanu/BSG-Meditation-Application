@@ -7,9 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		953F9A2C20FA813100264E53 /* track.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 953F9A2B20FA813000264E53 /* track.mp3 */; };
+		953F9A2C20FA813100264E53 /* Track.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 953F9A2B20FA813000264E53 /* Track.mp3 */; };
 		958A57C220D9273F00FC6F29 /* RippleEffect.swift in Sources */ = {isa = PBXBuildFile; fileRef = 958A57C120D9273E00FC6F29 /* RippleEffect.swift */; };
 		958A57C420D92AFA00FC6F29 /* PlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 958A57C320D92AFA00FC6F29 /* PlayerViewController.swift */; };
+		95D7797322BD7B6B002FEE76 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95D7797222BD7B6B002FEE76 /* Constants.swift */; };
+		95D7797522BD7B7E002FEE76 /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95D7797422BD7B7E002FEE76 /* Data.swift */; };
 		95FF287F20D6A70800B9F9D9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95FF287E20D6A70800B9F9D9 /* AppDelegate.swift */; };
 		95FF288120D6A70800B9F9D9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95FF288020D6A70800B9F9D9 /* ViewController.swift */; };
 		95FF288420D6A70800B9F9D9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 95FF288220D6A70800B9F9D9 /* Main.storyboard */; };
@@ -37,9 +39,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		953F9A2B20FA813000264E53 /* track.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = track.mp3; sourceTree = "<group>"; };
+		953F9A2B20FA813000264E53 /* Track.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Track.mp3; sourceTree = "<group>"; };
 		958A57C120D9273E00FC6F29 /* RippleEffect.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RippleEffect.swift; sourceTree = "<group>"; };
 		958A57C320D92AFA00FC6F29 /* PlayerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerViewController.swift; sourceTree = "<group>"; };
+		95D7797222BD7B6B002FEE76 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		95D7797422BD7B7E002FEE76 /* Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
 		95FF287B20D6A70800B9F9D9 /* BSG.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BSG.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		95FF287E20D6A70800B9F9D9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		95FF288020D6A70800B9F9D9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -90,6 +94,46 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		95D7796E22BD7597002FEE76 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				95FF288720D6A70800B9F9D9 /* LaunchScreen.storyboard */,
+				95FF288220D6A70800B9F9D9 /* Main.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		95D7796F22BD792B002FEE76 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				95FF28B820D6AE3000B9F9D9 /* Fonts */,
+				953F9A2B20FA813000264E53 /* Track.mp3 */,
+				95FF288520D6A70800B9F9D9 /* Assets.xcassets */,
+				958A57C120D9273E00FC6F29 /* RippleEffect.swift */,
+				95D7796E22BD7597002FEE76 /* Storyboards */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		95D7797022BD7933002FEE76 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				95FF287E20D6A70800B9F9D9 /* AppDelegate.swift */,
+				95FF288020D6A70800B9F9D9 /* ViewController.swift */,
+				958A57C320D92AFA00FC6F29 /* PlayerViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		95D7797122BD7975002FEE76 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				95D7797222BD7B6B002FEE76 /* Constants.swift */,
+				95D7797422BD7B7E002FEE76 /* Data.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		95FF287220D6A70800B9F9D9 = {
 			isa = PBXGroup;
 			children = (
@@ -113,15 +157,9 @@
 		95FF287D20D6A70800B9F9D9 /* BSG */ = {
 			isa = PBXGroup;
 			children = (
-				958A57C120D9273E00FC6F29 /* RippleEffect.swift */,
-				95FF287E20D6A70800B9F9D9 /* AppDelegate.swift */,
-				953F9A2B20FA813000264E53 /* track.mp3 */,
-				95FF28B820D6AE3000B9F9D9 /* Fonts */,
-				95FF288520D6A70800B9F9D9 /* Assets.xcassets */,
-				95FF288020D6A70800B9F9D9 /* ViewController.swift */,
-				958A57C320D92AFA00FC6F29 /* PlayerViewController.swift */,
-				95FF288720D6A70800B9F9D9 /* LaunchScreen.storyboard */,
-				95FF288220D6A70800B9F9D9 /* Main.storyboard */,
+				95D7797122BD7975002FEE76 /* Model */,
+				95D7796F22BD792B002FEE76 /* View */,
+				95D7797022BD7933002FEE76 /* ViewControllers */,
 				95FF288A20D6A70800B9F9D9 /* Info.plist */,
 			);
 			path = BSG;
@@ -269,7 +307,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				953F9A2C20FA813100264E53 /* track.mp3 in Resources */,
+				953F9A2C20FA813100264E53 /* Track.mp3 in Resources */,
 				95FF288920D6A70800B9F9D9 /* LaunchScreen.storyboard in Resources */,
 				95FF288620D6A70800B9F9D9 /* Assets.xcassets in Resources */,
 				95FF288420D6A70800B9F9D9 /* Main.storyboard in Resources */,
@@ -297,6 +335,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				95D7797322BD7B6B002FEE76 /* Constants.swift in Sources */,
+				95D7797522BD7B7E002FEE76 /* Data.swift in Sources */,
 				95FF288120D6A70800B9F9D9 /* ViewController.swift in Sources */,
 				95FF287F20D6A70800B9F9D9 /* AppDelegate.swift in Sources */,
 				958A57C220D9273F00FC6F29 /* RippleEffect.swift in Sources */,
@@ -471,7 +511,7 @@
 				INFOPLIST_FILE = BSG/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.skyblue.mojo;
+				PRODUCT_BUNDLE_IDENTIFIER = com.skyblue.trailblazerr;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -487,7 +527,7 @@
 				INFOPLIST_FILE = BSG/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.skyblue.mojo;
+				PRODUCT_BUNDLE_IDENTIFIER = com.skyblue.trailblazerr;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = 1;

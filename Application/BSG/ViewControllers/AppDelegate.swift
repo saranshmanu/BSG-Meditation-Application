@@ -8,9 +8,6 @@
 
 import UIKit
 
-var lastSeenHours = 0
-var lastSeenMinutes = 0
-
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 

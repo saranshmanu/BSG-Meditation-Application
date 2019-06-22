@@ -8,21 +8,11 @@
 
 import Foundation
 
-class AudioTrack {
-    public static let name = "Track"
-    public static let format = "mp3"
-}
-
-class CoreData {
-    public static let lastSeenKey = "LastSeen"
-    public static let practiseTimeKey = "LastPractisedSessionTime"
-    public static let practiseDateKey = "LastPractisedSessionDate"
-}
-
 class Data {
     public static var totalPractiseMinutes = 0
     public static var lastSeenMinutes = 0
     public static var lastSeenHours = 0
+    
     public static func loadCoreData() {
         self.loadPractiseTime()
         self.loadLastSeen()
@@ -53,13 +43,5 @@ class Data {
     }
     public static func saveLastSeen() {
         UserDefaults.standard.set(Date(), forKey: CoreData.lastSeenKey)
-    }
-}
-
-func checkAMorPM(number: Int) -> String{
-    if number < 12 {
-        return "AM"
-    } else {
-        return "PM"
     }
 }

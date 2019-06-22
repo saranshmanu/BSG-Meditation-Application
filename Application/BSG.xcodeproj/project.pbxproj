@@ -21,6 +21,8 @@
 		95940FC622BE93A200B4DA20 /* Lato-LightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 95FF28B420D6AE1500B9F9D9 /* Lato-LightItalic.ttf */; };
 		95940FC722BE93A200B4DA20 /* Lato-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 95FF28B520D6AE1500B9F9D9 /* Lato-Regular.ttf */; };
 		95940FCA22BEB2BD00B4DA20 /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 95940FC922BEB2BD00B4DA20 /* HealthKit.framework */; };
+		95940FCD22BEC94800B4DA20 /* MindfulnessHealthKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95940FCC22BEC94800B4DA20 /* MindfulnessHealthKit.swift */; };
+		95940FCF22BEC96A00B4DA20 /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95940FCE22BEC96A00B4DA20 /* Constant.swift */; };
 		95D7797522BD7B7E002FEE76 /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95D7797422BD7B7E002FEE76 /* Data.swift */; };
 		95FF287F20D6A70800B9F9D9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95FF287E20D6A70800B9F9D9 /* AppDelegate.swift */; };
 		95FF288120D6A70800B9F9D9 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95FF288020D6A70800B9F9D9 /* HomeViewController.swift */; };
@@ -54,6 +56,8 @@
 		958A57C320D92AFA00FC6F29 /* PlayerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerViewController.swift; sourceTree = "<group>"; };
 		95940FC922BEB2BD00B4DA20 /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = System/Library/Frameworks/HealthKit.framework; sourceTree = SDKROOT; };
 		95940FCB22BEB2BD00B4DA20 /* BSG.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = BSG.entitlements; sourceTree = "<group>"; };
+		95940FCC22BEC94800B4DA20 /* MindfulnessHealthKit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MindfulnessHealthKit.swift; sourceTree = "<group>"; };
+		95940FCE22BEC96A00B4DA20 /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
 		95D7797422BD7B7E002FEE76 /* Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
 		95FF287B20D6A70800B9F9D9 /* BSG.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BSG.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		95FF287E20D6A70800B9F9D9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -149,6 +153,8 @@
 			isa = PBXGroup;
 			children = (
 				95D7797422BD7B7E002FEE76 /* Data.swift */,
+				95940FCE22BEC96A00B4DA20 /* Constant.swift */,
+				95940FCC22BEC94800B4DA20 /* MindfulnessHealthKit.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -374,7 +380,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				95940FCF22BEC96A00B4DA20 /* Constant.swift in Sources */,
 				95D7797522BD7B7E002FEE76 /* Data.swift in Sources */,
+				95940FCD22BEC94800B4DA20 /* MindfulnessHealthKit.swift in Sources */,
 				95FF288120D6A70800B9F9D9 /* HomeViewController.swift in Sources */,
 				95FF287F20D6A70800B9F9D9 /* AppDelegate.swift in Sources */,
 				958A57C220D9273F00FC6F29 /* RippleEffect.swift in Sources */,

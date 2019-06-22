@@ -13,11 +13,17 @@ class HomeViewController: UIViewController {
 
     @IBOutlet weak var lastSeenLabel: UILabel!
     @IBOutlet weak var practiseDurationLabel: UILabel!
-    let healthStore = HKHealthStore()
-    let mindfulType = HKObjectType.categoryType(forIdentifier: .mindfulSession)
     
     func changePractiseTime() {
         practiseDurationLabel.text = " \(Data.totalPractiseMinutes) minutes"
+    }
+    
+    func checkAMorPM(number: Int) -> String{
+        if number < 12 {
+            return "AM"
+        } else {
+            return "PM"
+        }
     }
 
     @objc func changeLastSeen() {
@@ -28,28 +34,6 @@ class HomeViewController: UIViewController {
         }
     }
     
-    func saveHealthData(minutes: Double) {
-        let startTime = Date()
-        let endTime = startTime.addingTimeInterval(minutes * 60.0)
-        saveMindfullAnalysis(startTime: startTime, endTime: endTime)
-    }
-    func activateHealthKit() {
-        let typestoRead = Set([HKObjectType.categoryType(forIdentifier: HKCategoryTypeIdentifier.mindfulSession)!])
-        let typestoShare = Set([HKObjectType.categoryType(forIdentifier: HKCategoryTypeIdentifier.mindfulSession)!])
-        self.healthStore.requestAuthorization(toShare: typestoShare, read: typestoRead) { (success, error) -> Void in
-            if !success{
-                print("HealthKit Auth error\(String(describing: error))")
-            }
-        }
-    }
-    func saveMindfullAnalysis(startTime: Date, endTime: Date) {
-        let mindfullSample = HKCategorySample(type:mindfulType!, value: 0, start: startTime, end: endTime)
-        healthStore.save(mindfullSample, withCompletion: { (success, error) -> Void in
-            if error != nil {return}
-            print("New data was saved in HealthKit: \(success)")
-        })
-    }
-    
     override func viewDidAppear(_ animated: Bool) {
         changePractiseTime()
         changeLastSeen()
@@ -57,8 +41,6 @@ class HomeViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        activateHealthKit()
-        saveHealthData(minutes: 10)
         NotificationCenter.default.addObserver(self, selector: #selector(self.changeLastSeen), name: UIApplication.didBecomeActiveNotification, object: nil)
     }
 

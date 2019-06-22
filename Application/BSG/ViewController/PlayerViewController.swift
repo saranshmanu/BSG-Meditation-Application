@@ -41,7 +41,6 @@ class PlayerViewController: UIViewController {
     var transitionTime = 0.6
     var isPlaying = false
     var timerStarted = false
-    
     var timer = Timer()
     var player: AVAudioPlayer?
     
@@ -96,9 +95,14 @@ class PlayerViewController: UIViewController {
         }
     }
     
+    var sessionStartTime: Date?
+    var sessionEndTime: Date?
+    
     func playMedia(status: Bool) {
         if status == true {
             isPlaying = true
+            sessionEndTime = Date()
+            MindfulnessHealthKit.saveMindfullAnalysis(startTime: sessionStartTime!, endTime: sessionEndTime!)
             if timerStarted == false {
                 timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(PlayerViewController.updateTimer), userInfo: nil, repeats: true)
                 changeMediaControl(play: true, withName: AudioTrack.name, withFormat: AudioTrack.format)
@@ -115,6 +119,7 @@ class PlayerViewController: UIViewController {
             }
         } else {
             isPlaying = false
+            sessionStartTime = Date()
             if timerStarted == true {
                 timer.invalidate()
                 changeMediaControl(play: false, withName: AudioTrack.name, withFormat: AudioTrack.format)
@@ -138,7 +143,7 @@ class PlayerViewController: UIViewController {
 
     override func viewDidAppear(_ animated: Bool) {
         seconds = 0
-        minutes = 1
+        minutes = 0
         hours = 0
         playMedia(status: false)
     }

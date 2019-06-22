@@ -10,10 +10,19 @@
 		953F9A2C20FA813100264E53 /* Track.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 953F9A2B20FA813000264E53 /* Track.mp3 */; };
 		958A57C220D9273F00FC6F29 /* RippleEffect.swift in Sources */ = {isa = PBXBuildFile; fileRef = 958A57C120D9273E00FC6F29 /* RippleEffect.swift */; };
 		958A57C420D92AFA00FC6F29 /* PlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 958A57C320D92AFA00FC6F29 /* PlayerViewController.swift */; };
-		95D7797322BD7B6B002FEE76 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95D7797222BD7B6B002FEE76 /* Constants.swift */; };
+		95940FBE22BE93A200B4DA20 /* Lato-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 95FF28B120D6AE1400B9F9D9 /* Lato-Black.ttf */; };
+		95940FBF22BE93A200B4DA20 /* Lato-BlackItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 95FF28AE20D6AE1400B9F9D9 /* Lato-BlackItalic.ttf */; };
+		95940FC022BE93A200B4DA20 /* Lato-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 95FF28AF20D6AE1400B9F9D9 /* Lato-Bold.ttf */; };
+		95940FC122BE93A200B4DA20 /* Lato-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 95FF28B220D6AE1400B9F9D9 /* Lato-BoldItalic.ttf */; };
+		95940FC222BE93A200B4DA20 /* Lato-Hairline.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 95FF28B620D6AE1500B9F9D9 /* Lato-Hairline.ttf */; };
+		95940FC322BE93A200B4DA20 /* Lato-HairlineItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 95FF28B720D6AE1500B9F9D9 /* Lato-HairlineItalic.ttf */; };
+		95940FC422BE93A200B4DA20 /* Lato-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 95FF28B020D6AE1400B9F9D9 /* Lato-Italic.ttf */; };
+		95940FC522BE93A200B4DA20 /* Lato-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 95FF28B320D6AE1500B9F9D9 /* Lato-Light.ttf */; };
+		95940FC622BE93A200B4DA20 /* Lato-LightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 95FF28B420D6AE1500B9F9D9 /* Lato-LightItalic.ttf */; };
+		95940FC722BE93A200B4DA20 /* Lato-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 95FF28B520D6AE1500B9F9D9 /* Lato-Regular.ttf */; };
 		95D7797522BD7B7E002FEE76 /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95D7797422BD7B7E002FEE76 /* Data.swift */; };
 		95FF287F20D6A70800B9F9D9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95FF287E20D6A70800B9F9D9 /* AppDelegate.swift */; };
-		95FF288120D6A70800B9F9D9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95FF288020D6A70800B9F9D9 /* ViewController.swift */; };
+		95FF288120D6A70800B9F9D9 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95FF288020D6A70800B9F9D9 /* HomeViewController.swift */; };
 		95FF288420D6A70800B9F9D9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 95FF288220D6A70800B9F9D9 /* Main.storyboard */; };
 		95FF288620D6A70800B9F9D9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 95FF288520D6A70800B9F9D9 /* Assets.xcassets */; };
 		95FF288920D6A70800B9F9D9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 95FF288720D6A70800B9F9D9 /* LaunchScreen.storyboard */; };
@@ -42,11 +51,10 @@
 		953F9A2B20FA813000264E53 /* Track.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Track.mp3; sourceTree = "<group>"; };
 		958A57C120D9273E00FC6F29 /* RippleEffect.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RippleEffect.swift; sourceTree = "<group>"; };
 		958A57C320D92AFA00FC6F29 /* PlayerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerViewController.swift; sourceTree = "<group>"; };
-		95D7797222BD7B6B002FEE76 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		95D7797422BD7B7E002FEE76 /* Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
 		95FF287B20D6A70800B9F9D9 /* BSG.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BSG.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		95FF287E20D6A70800B9F9D9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		95FF288020D6A70800B9F9D9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		95FF288020D6A70800B9F9D9 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		95FF288320D6A70800B9F9D9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		95FF288520D6A70800B9F9D9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		95FF288820D6A70800B9F9D9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -115,20 +123,19 @@
 			path = View;
 			sourceTree = "<group>";
 		};
-		95D7797022BD7933002FEE76 /* ViewControllers */ = {
+		95D7797022BD7933002FEE76 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
 				95FF287E20D6A70800B9F9D9 /* AppDelegate.swift */,
-				95FF288020D6A70800B9F9D9 /* ViewController.swift */,
+				95FF288020D6A70800B9F9D9 /* HomeViewController.swift */,
 				958A57C320D92AFA00FC6F29 /* PlayerViewController.swift */,
 			);
-			path = ViewControllers;
+			path = ViewController;
 			sourceTree = "<group>";
 		};
 		95D7797122BD7975002FEE76 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				95D7797222BD7B6B002FEE76 /* Constants.swift */,
 				95D7797422BD7B7E002FEE76 /* Data.swift */,
 			);
 			path = Model;
@@ -159,7 +166,7 @@
 			children = (
 				95D7797122BD7975002FEE76 /* Model */,
 				95D7796F22BD792B002FEE76 /* View */,
-				95D7797022BD7933002FEE76 /* ViewControllers */,
+				95D7797022BD7933002FEE76 /* ViewController */,
 				95FF288A20D6A70800B9F9D9 /* Info.plist */,
 			);
 			path = BSG;
@@ -263,20 +270,23 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0920;
-				LastUpgradeCheck = 0920;
+				LastUpgradeCheck = 1020;
 				ORGANIZATIONNAME = "Saransh Mittal";
 				TargetAttributes = {
 					95FF287A20D6A70800B9F9D9 = {
 						CreatedOnToolsVersion = 9.2;
+						LastSwiftMigration = 1020;
 						ProvisioningStyle = Automatic;
 					};
 					95FF288E20D6A70800B9F9D9 = {
 						CreatedOnToolsVersion = 9.2;
+						LastSwiftMigration = 1020;
 						ProvisioningStyle = Automatic;
 						TestTargetID = 95FF287A20D6A70800B9F9D9;
 					};
 					95FF289920D6A70800B9F9D9 = {
 						CreatedOnToolsVersion = 9.2;
+						LastSwiftMigration = 1020;
 						ProvisioningStyle = Automatic;
 						TestTargetID = 95FF287A20D6A70800B9F9D9;
 					};
@@ -307,6 +317,16 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				95940FBE22BE93A200B4DA20 /* Lato-Black.ttf in Resources */,
+				95940FBF22BE93A200B4DA20 /* Lato-BlackItalic.ttf in Resources */,
+				95940FC022BE93A200B4DA20 /* Lato-Bold.ttf in Resources */,
+				95940FC122BE93A200B4DA20 /* Lato-BoldItalic.ttf in Resources */,
+				95940FC222BE93A200B4DA20 /* Lato-Hairline.ttf in Resources */,
+				95940FC322BE93A200B4DA20 /* Lato-HairlineItalic.ttf in Resources */,
+				95940FC422BE93A200B4DA20 /* Lato-Italic.ttf in Resources */,
+				95940FC522BE93A200B4DA20 /* Lato-Light.ttf in Resources */,
+				95940FC622BE93A200B4DA20 /* Lato-LightItalic.ttf in Resources */,
+				95940FC722BE93A200B4DA20 /* Lato-Regular.ttf in Resources */,
 				953F9A2C20FA813100264E53 /* Track.mp3 in Resources */,
 				95FF288920D6A70800B9F9D9 /* LaunchScreen.storyboard in Resources */,
 				95FF288620D6A70800B9F9D9 /* Assets.xcassets in Resources */,
@@ -335,9 +355,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				95D7797322BD7B6B002FEE76 /* Constants.swift in Sources */,
 				95D7797522BD7B7E002FEE76 /* Data.swift in Sources */,
-				95FF288120D6A70800B9F9D9 /* ViewController.swift in Sources */,
+				95FF288120D6A70800B9F9D9 /* HomeViewController.swift in Sources */,
 				95FF287F20D6A70800B9F9D9 /* AppDelegate.swift in Sources */,
 				958A57C220D9273F00FC6F29 /* RippleEffect.swift in Sources */,
 				958A57C420D92AFA00FC6F29 /* PlayerViewController.swift in Sources */,
@@ -409,6 +428,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -416,6 +436,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -466,6 +487,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -473,6 +495,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -513,7 +536,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.skyblue.trailblazerr;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
@@ -529,7 +552,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.skyblue.trailblazerr;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
@@ -545,7 +568,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.skyblue.BSGTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BSG.app/BSG";
 			};
@@ -562,7 +585,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.skyblue.BSGTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BSG.app/BSG";
 			};
@@ -578,7 +601,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.skyblue.BSGUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_TARGET_NAME = BSG;
 			};
@@ -594,7 +617,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.skyblue.BSGUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_TARGET_NAME = BSG;
 			};

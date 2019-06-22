@@ -41,5 +41,9 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
+	<key>NSHealthUpdateUsageDescription</key>
+	<string>Trailblazerr</string>
+	<key>NSHealthShareUsageDescription</key>
+	<string>Trailblazerr</string>
 </dict>
 </plist>

@@ -20,6 +20,7 @@
 		95940FC522BE93A200B4DA20 /* Lato-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 95FF28B320D6AE1500B9F9D9 /* Lato-Light.ttf */; };
 		95940FC622BE93A200B4DA20 /* Lato-LightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 95FF28B420D6AE1500B9F9D9 /* Lato-LightItalic.ttf */; };
 		95940FC722BE93A200B4DA20 /* Lato-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 95FF28B520D6AE1500B9F9D9 /* Lato-Regular.ttf */; };
+		95940FCA22BEB2BD00B4DA20 /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 95940FC922BEB2BD00B4DA20 /* HealthKit.framework */; };
 		95D7797522BD7B7E002FEE76 /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95D7797422BD7B7E002FEE76 /* Data.swift */; };
 		95FF287F20D6A70800B9F9D9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95FF287E20D6A70800B9F9D9 /* AppDelegate.swift */; };
 		95FF288120D6A70800B9F9D9 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95FF288020D6A70800B9F9D9 /* HomeViewController.swift */; };
@@ -51,6 +52,8 @@
 		953F9A2B20FA813000264E53 /* Track.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Track.mp3; sourceTree = "<group>"; };
 		958A57C120D9273E00FC6F29 /* RippleEffect.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RippleEffect.swift; sourceTree = "<group>"; };
 		958A57C320D92AFA00FC6F29 /* PlayerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerViewController.swift; sourceTree = "<group>"; };
+		95940FC922BEB2BD00B4DA20 /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = System/Library/Frameworks/HealthKit.framework; sourceTree = SDKROOT; };
+		95940FCB22BEB2BD00B4DA20 /* BSG.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = BSG.entitlements; sourceTree = "<group>"; };
 		95D7797422BD7B7E002FEE76 /* Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
 		95FF287B20D6A70800B9F9D9 /* BSG.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BSG.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		95FF287E20D6A70800B9F9D9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -82,6 +85,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				95940FCA22BEB2BD00B4DA20 /* HealthKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -102,6 +106,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		95940FC822BEB2BD00B4DA20 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				95940FC922BEB2BD00B4DA20 /* HealthKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		95D7796E22BD7597002FEE76 /* Storyboards */ = {
 			isa = PBXGroup;
 			children = (
@@ -148,6 +160,7 @@
 				95FF289220D6A70800B9F9D9 /* BSGTests */,
 				95FF289D20D6A70800B9F9D9 /* BSGUITests */,
 				95FF287C20D6A70800B9F9D9 /* Products */,
+				95940FC822BEB2BD00B4DA20 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -164,6 +177,7 @@
 		95FF287D20D6A70800B9F9D9 /* BSG */ = {
 			isa = PBXGroup;
 			children = (
+				95940FCB22BEB2BD00B4DA20 /* BSG.entitlements */,
 				95D7797122BD7975002FEE76 /* Model */,
 				95D7796F22BD792B002FEE76 /* View */,
 				95D7797022BD7933002FEE76 /* ViewController */,
@@ -277,6 +291,11 @@
 						CreatedOnToolsVersion = 9.2;
 						LastSwiftMigration = 1020;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.HealthKit = {
+								enabled = 1;
+							};
+						};
 					};
 					95FF288E20D6A70800B9F9D9 = {
 						CreatedOnToolsVersion = 9.2;
@@ -529,10 +548,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = BSG/BSG.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = JCRFV5ZL52;
 				INFOPLIST_FILE = BSG/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.skyblue.trailblazerr;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -545,10 +565,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = BSG/BSG.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = JCRFV5ZL52;
 				INFOPLIST_FILE = BSG/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.skyblue.trailblazerr;
 				PRODUCT_NAME = "$(TARGET_NAME)";

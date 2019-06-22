@@ -13,7 +13,6 @@ class PlayerViewController: UIViewController {
     
     @IBOutlet weak var pauseButton: UIButton!
     @IBOutlet weak var playButton: UIButton!
-    
     @IBOutlet weak var secondsLabel: UILabel!
     @IBOutlet weak var minutesLabel: UILabel!
     @IBOutlet weak var hoursLabel: UILabel!
